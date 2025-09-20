@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Kraken Cybersecurity</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="contact-page">
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="nav-brand">
+                <span class="brand-icon">🐙</span>
+                <span class="brand-text">KRAKEN</span>
+            </div>
+            
+            <div class="nav-links desktop-nav">
+                <a href="index.html" class="nav-link" data-key="home">Home</a>
+                <a href="index.html#services" class="nav-link" data-key="services">Services</a>
+                <a href="index.html#about" class="nav-link" data-key="about">About</a>
+                <a href="contact.html" class="nav-link active" data-key="contact">Contact</a>
+            </div>
+            
+            <div class="nav-actions">
+                <select id="languageSelect" class="language-select">
+                    <option value="en">English</option>
+                    <option value="ha">Hausa</option>
+                    <option value="yo">Yorùbá</option>
+                    <option value="ig">Igbo</option>
+                    <option value="ff">Fulfulde</option>
+                    <option value="kr">Kanuri</option>
+                    <option value="tiv">Tiv</option>
+                    <option value="ijc">Izon (Ijaw)</option>
+                    <option value="bin">Edo</option>
+                    <option value="nup">Nupe</option>
+                    <option value="efi">Efik</option>
+                    <option value="es">Español</option>
+                    <option value="fr">Français</option>
+                    <option value="de">Deutsch</option>
+                    <option value="zh">中文</option>
+                    <option value="ja">日本語</option>
+                    <option value="ar">العربية</option>
+                    <option value="pt">Português</option>
+                    <option value="ru">Русский</option>
+                    <option value="hi">हिंदी</option>
+                </select>
+                
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+        
+        <div class="mobile-nav" id="mobileNav">
+            <a href="index.html" class="mobile-nav-link" data-key="home">Home</a>
+            <a href="index.html#services" class="mobile-nav-link" data-key="services">Services</a>
+            <a href="index.html#about" class="mobile-nav-link" data-key="about">About</a>
+            <a href="contact.html" class="mobile-nav-link" data-key="contact">Contact</a>
+        </div>
+    </header>
+
+    <!-- Contact Content -->
+    <main class="contact-main">
+        <div class="container">
+            <!-- Contact Hero -->
+            <section class="contact-hero">
+                <h1 class="contact-title" data-key="contactTitle">Get In Touch</h1>
+                <p class="contact-subtitle" data-key="contactSubtitle">Ready to secure your digital assets? Contact our cybersecurity experts today.</p>
+            </section>
+
+            <!-- Contact Content -->
+            <div class="contact-content">
+                <!-- Contact Form -->
+                <div class="contact-form-section">
+                    <h2 data-key="sendMessage">Send us a Message</h2>
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="name" data-key="fullName">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email" data-key="emailAddress">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="company" data-key="company">Company</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone" data-key="phoneNumber">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service" data-key="serviceInterest">Service Interest</label>
+                            <select id="service" name="service">
+                                <option value="" data-key="selectService">Select a Service</option>
+                                <option value="threat-detection" data-key="threatDetection">Threat Detection</option>
+                                <option value="incident-response" data-key="incidentResponse">Incident Response</option>
+                                <option value="compliance" data-key="compliance">Compliance Management</option>
+                                <option value="consultation" data-key="consultation">Security Consultation</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message" data-key="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" data-key="sendMessage">Send Message</button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-info-section">
+                    <h2 data-key="contactInformation">Contact Information</h2>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-details">
+                            <h3 data-key="address">Address</h3>
+                            <p>123 Cyber Security Lane<br>Lagos, Nigeria</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div class="contact-details">
+                            <h3 data-key="phone">Phone</h3>
+                            <p>+234 123 456 7890</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div class="contact-details">
+                            <h3 data-key="email">Email</h3>
+                            <p>info@krakencyber.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">🕒</div>
+                        <div class="contact-details">
+                            <h3 data-key="businessHours">Business Hours</h3>
+                            <p data-key="hours">Monday - Friday: 8:00 AM - 6:00 PM</p>
+                        </div>
+                    </div>
+
+                    <div class="emergency-contact">
+                        <h3 data-key="emergencyContact">24/7 Emergency Response</h3>
+                        <p data-key="emergencyText">For immediate security incidents:</p>
+                        <a href="tel:+234999888777" class="emergency-number">+234 999 888 777</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <span class="brand-icon">🐙</span>
+                        <span class="brand-text">KRAKEN</span>
+                    </div>
+                    <p id="footerDescription" data-key="footerDescription">Advanced cybersecurity solutions protecting organizations worldwide from sophisticated cyber threats.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 data-key="servicesTitle">Services</h3>
+                    <ul>
+                        <li><a href="#" data-key="threatDetection">Threat Detection</a></li>
+                        <li><a href="#" data-key="incidentResponse">Incident Response</a></li>
+                        <li><a href="#" data-key="compliance">Compliance Management</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 data-key="companyTitle">Company</h3>
+                    <ul>
+                        <li><a href="#" data-key="about">About</a></li>
+                        <li><a href="#" data-key="careers">Careers</a></li>
+                        <li><a href="#" data-key="news">News & Insights</a></li>
+                        <li><a href="#" data-key="partners">Partners</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 data-key="supportTitle">Support</h3>
+                    <ul>
+                        <li><a href="#" data-key="documentation">Documentation</a></li>
+                        <li><a href="#" data-key="help">Help Center</a></li>
+                        <li><a href="contact.html" data-key="contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p id="copyright" data-key="copyright">© 2024 Kraken Cybersecurity. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#" data-key="privacy">Privacy Policy</a>
+                    <a href="#" data-key="terms">Terms of Service</a>
+                    <a href="#" data-key="cookies">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
