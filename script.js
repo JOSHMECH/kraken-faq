@@ -970,9 +970,11 @@ let currentLanguage = 'en';
 document.addEventListener('DOMContentLoaded', function() {
     // Load saved language preference
     const savedLanguage = localStorage.getItem('preferred-language');
-    if (savedLanguage && translations[savedLanguage]) {
+    const languageSelect = document.getElementById('languageSelect');
+    
+    if (savedLanguage && translations[savedLanguage] && languageSelect) {
         currentLanguage = savedLanguage;
-        document.getElementById('languageSelect').value = currentLanguage;
+        languageSelect.value = currentLanguage;
     }
     
     // Update content with current language
@@ -991,28 +993,50 @@ document.addEventListener('DOMContentLoaded', function() {
 // Event Listeners
 function initializeEventListeners() {
     // Language selector
-    document.getElementById('languageSelect').addEventListener('change', function() {
-        currentLanguage = this.value;
-        localStorage.setItem('preferred-language', currentLanguage);
-        updateContent();
-    });
+    const languageSelect = document.getElementById('languageSelect');
+    if (languageSelect) {
+        languageSelect.addEventListener('change', function() {
+            currentLanguage = this.value;
+            localStorage.setItem('preferred-language', currentLanguage);
+            updateContent();
+        });
+    }
     
     // CTA buttons
-    document.getElementById('getStartedBtn').addEventListener('click', function() {
-        alert(t('getStarted') + ' - Coming Soon!');
-    });
+    const getStartedBtn = document.getElementById('getStartedBtn');
+    if (getStartedBtn) {
+        getStartedBtn.addEventListener('click', function(e) {
+            e.preventDefault(); 
+            window.location.href = 'inprogress.html';
+        });
+    }
     
-    document.getElementById('heroGetStarted').addEventListener('click', function() {
-        alert(t('getStarted') + ' - Coming Soon!');
-    });
+    const heroGetStarted = document.getElementById('heroGetStarted');
+    if (heroGetStarted) {
+        heroGetStarted.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.location.href = 'inprogress.html';
+        });
+    }
     
-    document.getElementById('heroLearnMore').addEventListener('click', function() {
-        document.getElementById('faq').scrollIntoView({ behavior: 'smooth' });
-    });
+    const heroLearnMore = document.getElementById('heroLearnMore');
+    if (heroLearnMore) {
+        heroLearnMore.addEventListener('click', function() {
+            const faqSection = document.getElementById('faq');
+            if (faqSection) {
+                faqSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    }
     
-    document.getElementById('faqContactBtn').addEventListener('click', function() {
-        alert(t('contact') + ' - Coming Soon!');
-    });
+    // FAQ Contact button
+    const faqContactBtn = document.getElementById('faqContactBtn');
+    if (faqContactBtn) {
+        faqContactBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.location.href = 'contact.html';
+        });
+    }
     
     // Smooth scrolling for nav links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -1107,6 +1131,8 @@ function initializeFAQ() {
 function initializeMobileMenu() {
     const mobileMenuToggle = document.getElementById('mobileMenuToggle');
     const mobileNav = document.getElementById('mobileNav');
+    
+    if (!mobileMenuToggle || !mobileNav) return;
     
     mobileMenuToggle.addEventListener('click', function() {
         mobileNav.classList.toggle('active');
